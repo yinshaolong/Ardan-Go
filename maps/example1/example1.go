@@ -18,6 +18,12 @@ func main() {
 	fmt.Println("Score:", score, "Present: ", ok, "Current map:", players)
 	fmt.Println(repeatText)
 
+	//traditional method of determining if the key is absent:
+	if n, ok := players["anna"]; ok {
+		players["anna"] = n + 1
+	} else {
+		players["anna"] = n
+	}
 }
 
 func RepeatText(text string, number int) string {
